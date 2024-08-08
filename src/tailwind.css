@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* scrollbar */
+.no-scroll-x {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scroll-x::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.no-scroll-y {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scroll-y::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-3;
+  }
+
+  @screen tablet-sm {
+    .section-padding {
+      @apply px-6;
+    }
+  }
+
+  @screen tablet-lg {
+    .section-padding {
+      @apply px-12;
+    }
+  }
+
+  @screen laptop-md {
+    .section-padding {
+      @apply px-24;
+    }
+  }
+
+  @screen laptop-xl {
+    .section-padding {
+      @apply px-32;
+    }
+  }
+
+  @screen desktop {
+    .section-padding {
+      @apply px-56;
+    }
+  }
+}
